@@ -4,6 +4,22 @@
 
 [Packer](https://www.packer.io/) templates for [Vagrant](https://www.vagrantup.com/) base boxes
 
+# EM
+Copied packer executable to repo root directory.
+
+Build CentOS 6.8:
+```
+./packer build -only=virtualbox-iso -var disk_size=100000 -var cpus=2 -var memory=2048 -var mirror=http://mirror.nsc.liu.se/centos-store centos-6.8-x86_64.json
+```
+Build CentOS 7.3
+```
+./packer build -only=virtualbox-iso -var disk_size=100000 -var cpus=2 -var memory=2048 -var mirror=http://mirror.nsc.liu.se/centos-store/7.3.1611 centos-7.3-x86_64.json
+```
+Build CentOS 7.4
+```
+./packer build -only=virtualbox-iso -var disk_size=100000 -var cpus=2 -var memory=2048 centos-7.4-x86_64.json
+```
+
 ## Usage
 
 Clone the repository:
